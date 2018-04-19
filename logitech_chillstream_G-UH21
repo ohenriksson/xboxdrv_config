@@ -9,14 +9,21 @@ ABS_RY = right joystick, positive down
 ABS_X = left joystick, positive right
 ABS_Y = left joystick, positive down
 
-ABS_GAS = right trigger
-ABS_BRAKE = left trigger
+ABS_RZ = right trigger
+ABS_Z = left trigger
 BTN_TR = top of right trigger button
 BTN_TL = top of left trigger button
+
+BTN_START = start button
+BTN_SELECT = back button
+BTN_MODE = middle logitech button
 
 ABS_HAT0Y = arrows up/down -1 up, 1 down
 ABS_HAT0X = arrows left/right -1 left, 1 right
 
+BTN_THUMBL = press left joystick
+BTN_THUMBR = press right joystick
 
 
-sudo xboxdrv --evdev /dev/input/event17 --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y,ABS_BRAKE=lt,ABS_GAS=rt --axismap -Y1=Y1,-Y2=Y2 --evdev-keymap BTN_NORTH=x,BTN_WEST=y,BTN_SOUTH=a,BTN_EAST=b,BTN_TL=lb,BTN_TR=rb --mimic-xpad
+
+sudo xboxdrv --evdev /dev/input/event17 --evdev-absmap ABS_X=x1,ABS_Y=y1,ABS_RX=x2,ABS_RY=y2,ABS_HAT0X=dpad_x,ABS_HAT0Y=dpad_y,ABS_Z=lt,ABS_RZ=rt --axismap -Y1=Y1,-Y2=Y2 --evdev-keymap BTN_NORTH=x,BTN_WEST=y,BTN_SOUTH=a,BTN_EAST=b,BTN_TL=lb,BTN_TR=rb,BTN_START=start,BTN_SELECT=back,BTN_MODE=guide --mimic-xpad
